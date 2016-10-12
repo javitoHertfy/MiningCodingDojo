@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Infrastructure", "{583A0F48-CCBB-4B58-BD65-E752ADFEAEBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.DataAccess.Memory", "Javito.MiningCodingDojo.DataAccess.Memory\Javito.MiningCodingDojo.DataAccess.Memory.csproj", "{EB49E652-53E7-4695-8128-6EA7C7684DF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.ServiceLibrary", "Javito.MiningCodingDojo.ServiceLibrary\Javito.MiningCodingDojo.ServiceLibrary.csproj", "{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,11 +34,21 @@ Global
 		{E14578FF-A017-43F1-8794-5A61AFB3205F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E14578FF-A017-43F1-8794-5A61AFB3205F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E14578FF-A017-43F1-8794-5A61AFB3205F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB49E652-53E7-4695-8128-6EA7C7684DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB49E652-53E7-4695-8128-6EA7C7684DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB49E652-53E7-4695-8128-6EA7C7684DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB49E652-53E7-4695-8128-6EA7C7684DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E14578FF-A017-43F1-8794-5A61AFB3205F} = {D7D99DF2-FF8C-4FC0-8591-27E49EA348E4}
+		{EB49E652-53E7-4695-8128-6EA7C7684DF1} = {583A0F48-CCBB-4B58-BD65-E752ADFEAEBD}
+		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC} = {BD0B68A4-443B-4C7E-BEB7-CFE1264B8429}
 	EndGlobalSection
 EndGlobal

@@ -116,7 +116,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Javito.MiningCodingDojo.ServiceLibrary\Javito.MiningCodingDojo.ServiceLibrary.csproj">
+      <Project>{26faa4c6-9235-4f8e-93c8-2e7c780c6bdc}</Project>
+      <Name>Javito.MiningCodingDojo.ServiceLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
