@@ -15,30 +15,32 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
 
         public LoginController()
         {
-            this.minerManagementAppService = new MinerManagementAppService();
+            minerManagementAppService = new MinerManagementAppService();
         }
 
         // POST api/values
         [SwaggerOperation("CreateMiner")]
         [SwaggerResponse(HttpStatusCode.Created)]
+        [HttpPost]
         public void CreateMiner([FromBody]string name)
         {
-
+            this.minerManagementAppService.InsertMiner(name);
         }
 
         // POST api/values
         [SwaggerOperation("LoginMine")]
         [SwaggerResponse(HttpStatusCode.OK)]
+        [HttpPut]
         public void LoginMine([FromBody]string name)
         {
 
         }
 
         // GET api/values
-        [SwaggerOperation("GetAll")]
-        public IEnumerable<string> Get()
+        [SwaggerOperation("GetAllMiners")]
+        public IEnumerable<string> GetMiners()
         {
-            return new string[] { "value1", "value2" };
+            return this.minerManagementAppService.GetMiners();
         }
     }
 }

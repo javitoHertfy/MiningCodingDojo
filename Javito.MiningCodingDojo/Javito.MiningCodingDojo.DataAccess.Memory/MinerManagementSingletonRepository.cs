@@ -6,7 +6,36 @@ using System.Threading.Tasks;
 
 namespace Javito.MiningCodingDojo.DataAccess.Memory
 {
-    public class MinerManagementSingletonRepository
+    using System;
+
+    public sealed class MinerManagementSingletonRepository
     {
+        private static volatile MinerManagementSingletonRepository instance;
+        private static object syncRoot = new Object();
+
+        private MinerManagementSingletonRepository() { }
+
+        public static MinerManagementSingletonRepository Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    lock (syncRoot)
+                    {
+                        if (instance == null)
+                        {
+                            instance = new MinerManagementSingletonRepository();
+                            instance.Miners = new List<string>();
+                        }
+                            
+                    }
+                }
+
+                return instance;
+            }
+        }
+
+        public List<string> Miners { get; set; }
     }
 }

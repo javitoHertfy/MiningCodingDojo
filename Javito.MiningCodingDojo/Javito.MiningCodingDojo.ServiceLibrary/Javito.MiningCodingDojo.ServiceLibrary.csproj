@@ -44,6 +44,12 @@
     <Compile Include="MineAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Javito.MiningCodingDojo.DataAccess.Memory\Javito.MiningCodingDojo.DataAccess.Memory.csproj">
+      <Project>{eb49e652-53e7-4695-8128-6ea7c7684df1}</Project>
+      <Name>Javito.MiningCodingDojo.DataAccess.Memory</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
