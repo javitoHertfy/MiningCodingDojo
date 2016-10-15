@@ -44,6 +44,12 @@
     <Compile Include="MineSingletonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Javito.MiningCodingDojo.Domain\Javito.MiningCodingDojo.Domain.csproj">
+      <Project>{68adf126-6b9d-419a-a381-955062bceb61}</Project>
+      <Name>Javito.MiningCodingDojo.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Javito.MiningCodingDojo.DataAccess.Memory
 {
     using System;
+    using Javito.MiningCodingDojo.Domain;
 
     public sealed class MinerManagementSingletonRepository
     {
@@ -26,7 +27,8 @@ namespace Javito.MiningCodingDojo.DataAccess.Memory
                         if (instance == null)
                         {
                             instance = new MinerManagementSingletonRepository();
-                            instance.Miners = new List<string>();
+                            instance.Miners = new List<Miner>();
+                            instance.Miners = new List<Miner>();
                         }
                             
                     }
@@ -36,6 +38,7 @@ namespace Javito.MiningCodingDojo.DataAccess.Memory
             }
         }
 
-        public List<string> Miners { get; set; }
+        public List<Miner> Miners { get; set; }
+        public List<Miner> MinersLoggedIntoMine { get; set; }
     }
 }

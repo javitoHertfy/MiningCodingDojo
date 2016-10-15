@@ -117,6 +117,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Javito.MiningCodingDojo.Domain\Javito.MiningCodingDojo.Domain.csproj">
+      <Project>{68adf126-6b9d-419a-a381-955062bceb61}</Project>
+      <Name>Javito.MiningCodingDojo.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Javito.MiningCodingDojo.ServiceLibrary\Javito.MiningCodingDojo.ServiceLibrary.csproj">
       <Project>{26faa4c6-9235-4f8e-93c8-2e7c780c6bdc}</Project>
       <Name>Javito.MiningCodingDojo.ServiceLibrary</Name>

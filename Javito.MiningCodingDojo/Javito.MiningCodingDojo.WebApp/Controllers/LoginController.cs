@@ -22,7 +22,7 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         [SwaggerOperation("CreateMiner")]
         [SwaggerResponse(HttpStatusCode.Created)]
         [HttpPost]
-        public void CreateMiner([FromBody]string name)
+        public void CreateMiner(string name)
         {
             this.minerManagementAppService.InsertMiner(name);
         }
@@ -31,16 +31,16 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         [SwaggerOperation("LoginMine")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [HttpPut]
-        public void LoginMine([FromBody]string name)
+        public void LoginMine(string name)
         {
-
+            this.minerManagementAppService.LoginMine(name);
         }
 
         // GET api/values
         [SwaggerOperation("GetAllMiners")]
         public IEnumerable<string> GetMiners()
         {
-            return this.minerManagementAppService.GetMiners();
+            return this.minerManagementAppService.GetMiners().Select(x=>x.Name);
         }
     }
 }

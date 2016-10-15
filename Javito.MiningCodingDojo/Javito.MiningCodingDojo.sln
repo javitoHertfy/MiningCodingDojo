@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.ServiceLibrary", "Javito.MiningCodingDojo.ServiceLibrary\Javito.MiningCodingDojo.ServiceLibrary.csproj", "{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.Domain", "Javito.MiningCodingDojo.Domain\Javito.MiningCodingDojo.Domain.csproj", "{68ADF126-6B9D-419A-A381-955062BCEB61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68ADF126-6B9D-419A-A381-955062BCEB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68ADF126-6B9D-419A-A381-955062BCEB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68ADF126-6B9D-419A-A381-955062BCEB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68ADF126-6B9D-419A-A381-955062BCEB61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{E14578FF-A017-43F1-8794-5A61AFB3205F} = {D7D99DF2-FF8C-4FC0-8591-27E49EA348E4}
 		{EB49E652-53E7-4695-8128-6EA7C7684DF1} = {583A0F48-CCBB-4B58-BD65-E752ADFEAEBD}
 		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC} = {BD0B68A4-443B-4C7E-BEB7-CFE1264B8429}
+		{68ADF126-6B9D-419A-A381-955062BCEB61} = {CEF51E66-B55F-4EB9-8858-5C78ABD548CF}
 	EndGlobalSection
 EndGlobal
