@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Javito.MiningCodingDojo.Domain;
 using Javito.MiningCodingDojo.ServiceLibrary;
 using Swashbuckle.Swagger.Annotations;
 
@@ -18,7 +19,8 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
             minerManagementAppService = new MinerManagementAppService();
         }
 
-        // POST api/values
+      
+        [Route("CreateMiner")]
         [SwaggerOperation("CreateMiner")]
         [SwaggerResponse(HttpStatusCode.Created)]
         [HttpPost]
@@ -27,7 +29,8 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
             this.minerManagementAppService.InsertMiner(name);
         }
 
-        // POST api/values
+        
+        [Route("LoginMine")]
         [SwaggerOperation("LoginMine")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [HttpPut]
@@ -35,12 +38,18 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         {
             this.minerManagementAppService.LoginMine(name);
         }
-
-        // GET api/values
-        [SwaggerOperation("GetAllMiners")]
+       
+        [SwaggerOperation("GetMiners")]
         public IEnumerable<string> GetMiners()
         {
-            return this.minerManagementAppService.GetMiners().Select(x=>x.Name);
+            return this.minerManagementAppService.GetMiners().Select(x => x.Name);
+        }
+        
+        [SwaggerOperation("GetMinerByName")]
+        [HttpGet]
+        public Miner GetMinerByName(string name)
+        {
+            return this.minerManagementAppService.GetMiners().FirstOrDefault(x=>x.Name == name);
         }
     }
 }

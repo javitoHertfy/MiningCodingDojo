@@ -14,6 +14,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public MinerManagementAppService()
         {
+            
             minerManagementSingletonRepository = MinerManagementSingletonRepository.Instance;
         }
 
