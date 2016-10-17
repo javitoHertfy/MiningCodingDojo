@@ -21,6 +21,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public int CollectGold(Guid minerId)
         {
+            FailureService.GetRandomException();
             int reward = 0;
             Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);
 
@@ -34,7 +35,8 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         }
 
         public void SaveGold(Guid minerId, int goldQuantity)
-        {          
+        {
+            FailureService.GetRandomException();
             Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);
             Miner minerCollected = mineSingletonRepository.GoldMine.Miners.FirstOrDefault(x => x.Id == minerId);
 

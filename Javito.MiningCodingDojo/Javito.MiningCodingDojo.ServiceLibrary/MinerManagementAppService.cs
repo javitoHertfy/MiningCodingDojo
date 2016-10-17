@@ -18,22 +18,24 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         }
 
         public List<Miner> GetMiners()
-        {
+        {            
             return this.minerManagementSingletonRepository.Miners;
         }
 
         public void InsertMiner(string name)
         {
+           FailureService.GetRandomException();
            this.minerManagementSingletonRepository.Miners.Add(new Miner(name));            
         }
 
         public Miner GetMiner(string name)
-        {
+        {            
             return this.minerManagementSingletonRepository.Miners.FirstOrDefault(x => x.Name == name);
         }
 
         public void LoginMine(string name)
         {
+            FailureService.GetRandomException();
             Miner miner = this.GetMiner(name);
             if(miner != null)
                 this.minerManagementSingletonRepository.MinersLoggedIntoMine.Add(miner);
