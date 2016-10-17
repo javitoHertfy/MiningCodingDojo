@@ -14,20 +14,20 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         private readonly MineSingletonRepository mineSingletonRepository;
 
         public MineAppService()
-        {            
+        {
             minerManagementSingletonRepository = MinerManagementSingletonRepository.Instance;
             mineSingletonRepository = MineSingletonRepository.Instance;
         }
 
         public int CollectGold(Guid minerId)
         {
-            FailureService.GetRandomException();
+            FailureService.GetRandomException(3);
             int reward = 0;
             Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);
 
-            if(miner != null)
+            if (miner != null)
             {
-                reward = 1;              
+                reward = 1;
             }
 
             return reward;
@@ -36,7 +36,8 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public void SaveGold(Guid minerId, int goldQuantity)
         {
-            FailureService.GetRandomException();
+
+            FailureService.GetRandomException(2);
             Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);
             Miner minerCollected = mineSingletonRepository.GoldMine.Miners.FirstOrDefault(x => x.Id == minerId);
 
@@ -44,8 +45,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
             {
                 mineSingletonRepository.GoldMine.GoldLeft = mineSingletonRepository.GoldMine.GoldLeft - goldQuantity;
                 minerCollected.GoldObtained = minerCollected.GoldObtained + goldQuantity;
-            };            
-
+            };
         }
     }
 }

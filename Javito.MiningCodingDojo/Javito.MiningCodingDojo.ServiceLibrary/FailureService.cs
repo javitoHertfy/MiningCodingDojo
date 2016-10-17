@@ -18,22 +18,13 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
             }
         }
         
-        public static Exception GetRandomException()
+        public static Exception GetRandomException(int multiplier)
         {
-            if (RandomNumber(1, 10) % 4 == 0)
+            if (RandomNumber(1, 10) % multiplier == 0)
             {
                 throw new TimeoutException();
             }
             return null;
-        }
-
-        public static void UnLogRandomMinerFromGoldMine()
-        {
-            if (RandomNumber(1, 10) % 5 == 0)
-            {
-                
-            }
-            
-        }
+        }        
     }
 }
