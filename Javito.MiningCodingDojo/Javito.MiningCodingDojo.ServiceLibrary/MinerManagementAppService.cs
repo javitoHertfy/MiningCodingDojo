@@ -39,7 +39,15 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
             Miner miner = this.GetMiner(name);
             if(miner != null)
                 this.minerManagementSingletonRepository.MinersLoggedIntoMine.Add(miner);
-            throw new DllNotFoundException();
+            else
+                throw new Exception("Miner not found, please register first");
+        }
+
+        public void LogoutMine(string name)
+        {            
+            Miner miner = this.GetMiner(name);
+            if (miner != null)
+                this.minerManagementSingletonRepository.MinersLoggedIntoMine.Remove(miner);            
         }
     }
 }

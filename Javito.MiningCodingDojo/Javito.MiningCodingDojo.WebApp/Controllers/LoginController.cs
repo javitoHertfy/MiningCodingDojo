@@ -17,10 +17,8 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         public LoginController()
         {
             minerManagementAppService = new MinerManagementAppService();
-        }
-
-      
-        [Route("CreateMiner")]
+        }      
+        
         [SwaggerOperation("CreateMiner")]
         [SwaggerResponse(HttpStatusCode.Created)]
         [HttpPost]
@@ -28,9 +26,8 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         {
             this.minerManagementAppService.InsertMiner(name);
         }
-
         
-        [Route("LoginMine")]
+        
         [SwaggerOperation("LoginMine")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [HttpPut]
