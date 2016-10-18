@@ -28,8 +28,7 @@ namespace Javito.MiningCodingDojo.DataAccess.Memory
                         {
                             instance = new MinerManagementSingletonRepository();
                             instance.Miners = new List<Miner>();
-                            instance.MinersLoggedIntoMine = new List<Miner>();
-                            instance.MinersGold = new List<Miner>();
+                            instance.MinersLoggedIntoMine = new List<Miner>();                            
                         }
                             
                     }
@@ -40,7 +39,6 @@ namespace Javito.MiningCodingDojo.DataAccess.Memory
         }
 
         public List<Miner> Miners { get; set; }
-        public List<Miner> MinersLoggedIntoMine { get; set; }
-        public List<Miner> MinersGold { get; set; }
+        public List<Miner> MinersLoggedIntoMine { get; set; }       
     }
 }

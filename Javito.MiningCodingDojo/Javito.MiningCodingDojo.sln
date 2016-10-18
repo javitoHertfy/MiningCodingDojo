@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.Domain", "Javito.MiningCodingDojo.Domain\Javito.MiningCodingDojo.Domain.csproj", "{68ADF126-6B9D-419A-A381-955062BCEB61}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DC42E3A1-2E9E-435D-A85F-DB7810706E74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
