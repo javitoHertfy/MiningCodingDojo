@@ -28,6 +28,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.Dom
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DC42E3A1-2E9E-435D-A85F-DB7810706E74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.UnitTest", "Javito.MiningCodingDojo.UnitTest\Javito.MiningCodingDojo.UnitTest.csproj", "{C6599151-961C-4576-A756-58D1D925118A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{C1073FB7-89E2-4B98-948A-47CF2611C439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.ResilientClient", "Javito.MiningCodingDojo.ResilientClient\Javito.MiningCodingDojo.ResilientClient.csproj", "{7544EF30-C6E7-4727-ADEC-23080ED31970}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +56,14 @@ Global
 		{68ADF126-6B9D-419A-A381-955062BCEB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68ADF126-6B9D-419A-A381-955062BCEB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68ADF126-6B9D-419A-A381-955062BCEB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6599151-961C-4576-A756-58D1D925118A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6599151-961C-4576-A756-58D1D925118A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6599151-961C-4576-A756-58D1D925118A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6599151-961C-4576-A756-58D1D925118A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7544EF30-C6E7-4727-ADEC-23080ED31970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7544EF30-C6E7-4727-ADEC-23080ED31970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7544EF30-C6E7-4727-ADEC-23080ED31970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7544EF30-C6E7-4727-ADEC-23080ED31970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +73,7 @@ Global
 		{EB49E652-53E7-4695-8128-6EA7C7684DF1} = {583A0F48-CCBB-4B58-BD65-E752ADFEAEBD}
 		{26FAA4C6-9235-4F8E-93C8-2E7C780C6BDC} = {BD0B68A4-443B-4C7E-BEB7-CFE1264B8429}
 		{68ADF126-6B9D-419A-A381-955062BCEB61} = {CEF51E66-B55F-4EB9-8858-5C78ABD548CF}
+		{C6599151-961C-4576-A756-58D1D925118A} = {DC42E3A1-2E9E-435D-A85F-DB7810706E74}
+		{7544EF30-C6E7-4727-ADEC-23080ED31970} = {C1073FB7-89E2-4B98-948A-47CF2611C439}
 	EndGlobalSection
 EndGlobal
