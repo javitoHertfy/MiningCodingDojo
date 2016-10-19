@@ -24,7 +24,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public void InsertMiner(string name)
         {
-           FailureService.GetRandomException(5);
+           FailureService.GetRandomException(2);
            this.minerManagementSingletonRepository.Miners.Add(new Miner(name));            
         }
 
@@ -35,7 +35,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public void LoginMine(string name)
         {
-            FailureService.GetRandomException(4);
+            FailureService.GetRandomException(3);
             Miner miner = this.GetMiner(name);
             if(miner != null)
                 this.minerManagementSingletonRepository.MinersLoggedIntoMine.Add(miner);
