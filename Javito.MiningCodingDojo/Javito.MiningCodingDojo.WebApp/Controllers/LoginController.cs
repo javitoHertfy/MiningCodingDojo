@@ -36,11 +36,11 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
             this.minerManagementAppService.LoginMine(name);
         }
        
-        [SwaggerOperation("GetMiners")]
-        public IEnumerable<string> GetMiners()
-        {
-            return this.minerManagementAppService.GetMiners().Select(x => x.Name);
-        }
+        //[SwaggerOperation("GetMiners")]
+        //public IEnumerable<string> GetMiners()
+        //{
+        //    return this.minerManagementAppService.GetMiners().Select(x => x.Name);
+        //}
         
         [SwaggerOperation("GetMinerByName")]
         [HttpGet]
