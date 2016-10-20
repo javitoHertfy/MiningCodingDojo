@@ -73,9 +73,17 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         {
             if (miner.GoldObtained == goldQuantity)
             {
-                mineSingletonRepository.GoldMine.GoldLeft = mineSingletonRepository.GoldMine.GoldLeft - goldQuantity;
-                minerCollected.GoldObtained = minerCollected.GoldObtained + goldQuantity;
-                miner.GoldObtained = 0;
+                if (mineSingletonRepository.GoldMine.GoldLeft > 0)
+                {
+                    mineSingletonRepository.GoldMine.GoldLeft = mineSingletonRepository.GoldMine.GoldLeft - goldQuantity;
+                    minerCollected.GoldObtained = minerCollected.GoldObtained + goldQuantity;
+                    miner.GoldObtained = 0;
+                }
+                else
+                {
+                    throw new Exception("Mine is empty!");
+                }
+                
             }
             else
             {
