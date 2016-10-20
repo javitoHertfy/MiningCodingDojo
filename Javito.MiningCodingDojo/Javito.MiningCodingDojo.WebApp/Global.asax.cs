@@ -30,12 +30,12 @@ namespace Javito.MiningCodingDojo.WebApp
 
         private void randomlogOutTimer_Tick(object sender, EventArgs e)
         {
-            int count = minerManagementAppService.GetMiners().Count;          
+            int count = minerManagementAppService.GetMinersLogged().Count;          
             if (count > 0)
             {
                 Random random = new Random();
                 int number = random.Next(0, count - 1);
-                string name = minerManagementAppService.GetMiners()[number].Name;
+                string name = minerManagementAppService.GetMinersLogged()[number].Name;
                 minerManagementAppService.LogoutMine(name);
             }
         }
@@ -45,10 +45,9 @@ namespace Javito.MiningCodingDojo.WebApp
             string urlReferred = Request.UrlReferrer != null ? Request.UrlReferrer.AbsolutePath : "";
             string path = Request.FilePath;
             if (urlReferred.Contains("swagger") && !path.Contains("swagger"))
-            {                
+            {
                 throw new Exception("Swagger is a tool for documentation do not use it to win the tournament");
-            }
-            
+            }            
         }
     }
 }

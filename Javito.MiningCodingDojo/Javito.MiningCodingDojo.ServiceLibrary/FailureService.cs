@@ -23,12 +23,12 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         {
             if (RandomNumber(1, 10) % multiplier == 0)
             {
-                if(exceptionType == ExceptionTypesEnum.Timeout)
+                if (exceptionType == ExceptionTypesEnum.Timeout)
                 {
                     Thread.Sleep(15);
                     throw new Exception("Timeout exception");
                 }
-                if(exceptionType == ExceptionTypesEnum.ServiceUnavailable)
+                if (exceptionType == ExceptionTypesEnum.ServiceUnavailable)
                 {
                     throw new Exception("Service unavailable");
                 }

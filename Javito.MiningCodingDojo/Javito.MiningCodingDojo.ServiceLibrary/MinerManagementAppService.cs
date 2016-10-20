@@ -17,9 +17,9 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
             minerManagementSingletonRepository = MinerManagementSingletonRepository.Instance;
         }
 
-        public List<Miner> GetMiners()
+        public List<Miner> GetMinersLogged()
         {            
-            return this.minerManagementSingletonRepository.Miners;
+            return this.minerManagementSingletonRepository.MinersLoggedIntoMine;
         }
 
         public void InsertMiner(string name)
@@ -37,8 +37,13 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         }
 
         public Miner GetMiner(string name)
-        {            
+        {
             return this.minerManagementSingletonRepository.Miners.FirstOrDefault(x => x.Name == name);
+        }
+
+        public Miner GetMinerLogged(string name)
+        {
+            return this.minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Name == name);
         }
 
         public void LoginMine(string name)
@@ -57,10 +62,11 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public void LogoutMine(string name)
         {            
-            Miner miner = this.GetMiner(name);
+            Miner miner = this.GetMinerLogged(name);
             if (miner != null)
             {
-                this.minerManagementSingletonRepository.MinersLoggedIntoMine.Remove(miner);            
+                this.minerManagementSingletonRepository.MinersLoggedIntoMine.Remove(miner);
+                miner.IsLogged = false;
             }
                 
         }

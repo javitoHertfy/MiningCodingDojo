@@ -52,7 +52,7 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         [HttpGet]
         public IEnumerable<string> GetMiners()
         {
-            return this.minerManagementAppService.GetMiners().Select(x => x.Name);
+            return this.minerManagementAppService.GetMinersLogged().Select(x => x.Name);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         [HttpGet]
         public Miner GetMinerByName(string name)
         {
-            return this.minerManagementAppService.GetMiners().FirstOrDefault(x=>x.Name == name);
+            return this.minerManagementAppService.GetMinersLogged().FirstOrDefault(x => x.Name == name);
         }
     }
 }
