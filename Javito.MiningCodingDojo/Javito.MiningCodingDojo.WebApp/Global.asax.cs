@@ -24,7 +24,7 @@ namespace Javito.MiningCodingDojo.WebApp
             GlobalConfiguration.Configure(WebApiConfig.Register);
             randomlogOutTimer = new Timer();
             randomlogOutTimer.Elapsed += new ElapsedEventHandler(randomlogOutTimer_Tick);
-            randomlogOutTimer.Interval = 600000; // in miliseconds
+            randomlogOutTimer.Interval = 60000; // in miliseconds
             randomlogOutTimer.Start();
         }
 
@@ -46,7 +46,7 @@ namespace Javito.MiningCodingDojo.WebApp
             string path = Request.FilePath;
             if (urlReferred.Contains("swagger") && !path.Contains("swagger"))
             {                
-                //throw new Exception("Swagger is a tool for documentation do not use it to win the tournament");
+                throw new Exception("Swagger is a tool for documentation do not use it to win the tournament");
             }
             
         }
