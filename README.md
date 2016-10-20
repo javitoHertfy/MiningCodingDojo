@@ -16,11 +16,19 @@ Nuget Packages:
 
 ### Prerequisities
 
-
+No prerequesites 
 
 ## Running the tests
 
+To access to all the endpoints just run [host]/swagger
+
 
 ## Deployment
+
+No deployment instructions
+
+## Introduction
+
+The objective of the Dojo is
 
 
