@@ -30,6 +30,7 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         public void CreateMiner(string name)
         {
             this.minerManagementAppService.InsertMiner(name);
+
         }
 
         /// <summary>

@@ -11,36 +11,22 @@ namespace Javito.MiningCodingDojo.ResilientClient
     {
         static void Main(string[] args)
         {
-            var client = new RestClient("http://localhost:53032/");
-            //http://localhost:53032/api/login/LoginMiner?name=Alain
-            var request = new RestRequest("api/Login/CreateMiner", Method.POST);
-            request.AddHeader("Content-type", "application/json");
-            request.AddJsonBody(new
-            {
-                Name = "Javi",               
-            });
+            var client = new RestClient("http://miningcodingdojo.azurewebsites.net/");
+            //http://localhost:53032/v1/login/CreateMiner/{0}
+            var request = new RestRequest("/v1/login/CreateMiner/{name}", Method.POST);
+            request.AddParameter("name", "Javier!");
 
             // execute the request
             IRestResponse response = client.Execute(request);
             var content = response.Content;
 
-            request = new RestRequest("api/Login/LoginMine", Method.PUT);
-            request.AddHeader("Content-type", "application/json");
-            request.AddJsonBody(new
-            {
-                Name = "Javi",
-            });
+            request = new RestRequest("/v1/login/LoginMine/{name}", Method.PUT);
+            request.AddParameter("name", "Javi");
 
             response = client.Execute(request);
             content = response.Content;
 
-            request = new RestRequest("api/Mining/CollectGold", Method.PUT);
-            request.AddHeader("Content-type", "application/json");
-            request.AddJsonBody(new
-            {
-                Id = "Javi",
-            });
-
+            request = new RestRequest("/v1/login/GetMinerByName/{name}", Method.GET);
             response = client.Execute(request);
             content = response.Content;
 

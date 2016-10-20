@@ -24,7 +24,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public void InsertMiner(string name)
         {
-           FailureService.GetRandomException(3, ExceptionTypesEnum.Timeout);
+           FailureService.GetRandomException(5, ExceptionTypesEnum.Timeout);
            if(!minerManagementSingletonRepository.Miners.Any(x=>x.Name == name))
            {
                this.minerManagementSingletonRepository.Miners.Add(new Miner(name));            
