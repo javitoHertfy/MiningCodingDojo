@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Javito.MiningCodingDojo.ServiceLibrary
 {
@@ -18,11 +19,23 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
             }
         }
         
-        public static Exception GetRandomException(int multiplier)
+        public static Exception GetRandomException(int multiplier, ExceptionTypesEnum exceptionType)
         {
             if (RandomNumber(1, 10) % multiplier == 0)
             {
-                throw new TimeoutException();
+                if(exceptionType == ExceptionTypesEnum.Timeout)
+                {
+                    Thread.Sleep(15);
+                    throw new Exception("Timeout exception");
+                }
+                if(exceptionType == ExceptionTypesEnum.ServiceUnavailable)
+                {
+                    throw new Exception("Service unavailable");
+                }
+                if (exceptionType == ExceptionTypesEnum.InternalServerError)
+                {
+                    throw new Exception("Internal Server Error");
+                }
             }
             return null;
         }        

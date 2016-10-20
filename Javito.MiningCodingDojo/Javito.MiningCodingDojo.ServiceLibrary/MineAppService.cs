@@ -21,8 +21,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public int CollectGold(Guid minerId)
         {
-            FailureService.GetRandomException(3);
-            int reward = 0;
+            FailureService.GetRandomException(3, ExceptionTypesEnum.InternalServerError);            
             Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);
 
             if (miner != null)
@@ -41,7 +40,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         public void SaveGold(Guid minerId, int goldQuantity)
         {
 
-            FailureService.GetRandomException(2);
+            FailureService.GetRandomException(2, ExceptionTypesEnum.Timeout);
             Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);            
 
             if (miner != null)

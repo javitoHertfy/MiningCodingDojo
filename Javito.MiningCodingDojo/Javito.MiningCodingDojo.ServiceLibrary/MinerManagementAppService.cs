@@ -24,7 +24,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public void InsertMiner(string name)
         {
-           FailureService.GetRandomException(2);
+           FailureService.GetRandomException(3, ExceptionTypesEnum.Timeout);
            if(!minerManagementSingletonRepository.Miners.Any(x=>x.Name == name))
            {
                this.minerManagementSingletonRepository.Miners.Add(new Miner(name));            
@@ -43,10 +43,11 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
         public void LoginMine(string name)
         {
-            FailureService.GetRandomException(3);
+            FailureService.GetRandomException(3, ExceptionTypesEnum.ServiceUnavailable);
             Miner miner = this.GetMiner(name);
             if(miner != null)
             {
+                miner.Id = Guid.NewGuid();
                 miner.IsLogged = true;
                 this.minerManagementSingletonRepository.MinersLoggedIntoMine.Add(miner);
             }                
