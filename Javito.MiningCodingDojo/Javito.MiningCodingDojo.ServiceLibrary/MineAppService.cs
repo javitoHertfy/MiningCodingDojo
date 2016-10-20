@@ -27,10 +27,14 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
             if (miner != null)
             {
-                reward = 1;
+                miner.GoldObtained = 1;
+            }
+            else
+            {
+                throw new Exception("Miner not found in the mine, please log in again");
             }
 
-            return reward;
+            return miner.GoldObtained;
 
         }
 
@@ -38,14 +42,46 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         {
 
             FailureService.GetRandomException(2);
-            Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);
-            Miner minerCollected = mineSingletonRepository.GoldMine.Miners.FirstOrDefault(x => x.Id == minerId);
+            Miner miner = minerManagementSingletonRepository.MinersLoggedIntoMine.FirstOrDefault(x => x.Id == minerId);            
 
             if (miner != null)
             {
+                Miner minerCollected = mineSingletonRepository.GoldMine.Miners.FirstOrDefault(x => x.Id == minerId);
+                if(minerCollected == null)
+                {
+                    minerCollected = new Miner(miner.Name);
+                    minerCollected.Id = miner.Id;
+                    minerCollected.IsLogged = miner.IsLogged;                    
+                    minerCollected.GoldObtained = miner.GoldObtained;
+
+                    mineSingletonRepository.GoldMine.Miners.Add(minerCollected);                    
+                    SaveGoldIntoPocket(minerId, goldQuantity, miner, minerCollected);
+                }
+                else
+                {
+                    SaveGoldIntoPocket(minerId, goldQuantity, miner, minerCollected);
+                }
+                
+                
+            }
+            else
+            {
+                throw new Exception("Miner not found in the mine, please log in again");
+            }
+        }
+
+        private void SaveGoldIntoPocket(Guid minerId, int goldQuantity, Miner miner, Miner minerCollected)
+        {
+            if (miner.GoldObtained == goldQuantity)
+            {
                 mineSingletonRepository.GoldMine.GoldLeft = mineSingletonRepository.GoldMine.GoldLeft - goldQuantity;
                 minerCollected.GoldObtained = minerCollected.GoldObtained + goldQuantity;
-            };
+                miner.GoldObtained = 0;
+            }
+            else
+            {
+                throw new Exception(string.Format("Miner with Id {0} is a cheater!!", minerId));
+            }
         }
     }
 }

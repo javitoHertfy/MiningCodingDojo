@@ -19,20 +19,20 @@ namespace Javito.MiningCodingDojo.Domain
         public string Name
         {
             get { return name; }
-            private set { name = value; }
+            set { name = value; }
         }
         private Guid id;
         public Guid Id
         {
             get { return id; }
-            private set { id = value; }
+            set { id = value; }
         }
 
         private bool isLogged;
         public bool IsLogged
         {
             get { return isLogged; }
-            private set { isLogged = value; }
+            set { isLogged = value; }
         }
 
         private int goldObtained;

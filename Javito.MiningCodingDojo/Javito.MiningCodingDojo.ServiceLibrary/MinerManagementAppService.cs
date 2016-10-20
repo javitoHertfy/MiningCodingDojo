@@ -25,7 +25,15 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         public void InsertMiner(string name)
         {
            FailureService.GetRandomException(2);
-           this.minerManagementSingletonRepository.Miners.Add(new Miner(name));            
+           if(!minerManagementSingletonRepository.Miners.Any(x=>x.Name == name))
+           {
+               this.minerManagementSingletonRepository.Miners.Add(new Miner(name));            
+           }
+           else
+           {
+               throw new Exception("The name has already been chosen be more creative!");
+           }
+           
         }
 
         public Miner GetMiner(string name)
@@ -38,7 +46,10 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
             FailureService.GetRandomException(3);
             Miner miner = this.GetMiner(name);
             if(miner != null)
+            {
+                miner.IsLogged = true;
                 this.minerManagementSingletonRepository.MinersLoggedIntoMine.Add(miner);
+            }                
             else
                 throw new Exception("Miner not found, please register first");
         }
@@ -47,7 +58,10 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         {            
             Miner miner = this.GetMiner(name);
             if (miner != null)
+            {
                 this.minerManagementSingletonRepository.MinersLoggedIntoMine.Remove(miner);            
+            }
+                
         }
     }
 }

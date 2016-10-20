@@ -25,7 +25,7 @@ namespace Javito.MiningCodingDojo.Domain
         public int GoldLeft
         {
             get { return goldLeft; }
-            set { GoldLeft = value; }
+            set { goldLeft = value; }
         }
     }
 }

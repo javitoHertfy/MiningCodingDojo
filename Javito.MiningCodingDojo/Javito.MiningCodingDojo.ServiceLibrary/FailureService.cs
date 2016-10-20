@@ -20,10 +20,10 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
         
         public static Exception GetRandomException(int multiplier)
         {
-            if (RandomNumber(1, 10) % multiplier == 0)
-            {
-                throw new TimeoutException();
-            }
+            //if (RandomNumber(1, 10) % multiplier == 0)
+            //{
+            //    throw new TimeoutException();
+            //}
             return null;
         }        
     }
