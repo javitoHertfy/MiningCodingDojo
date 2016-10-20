@@ -83,5 +83,15 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
                 throw new Exception(string.Format("Miner with Id {0} is a cheater!!", minerId));
             }
         }
+
+        public IEnumerable<Miner> GetResults()
+        {
+           return mineSingletonRepository.GoldMine.Miners.OrderByDescending(x => x.GoldObtained);
+        }
+
+        public int GetGoldLeft()
+        {
+            return mineSingletonRepository.GoldMine.GoldLeft;
+        }
     }
 }

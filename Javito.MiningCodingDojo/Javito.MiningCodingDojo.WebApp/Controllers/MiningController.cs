@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Javito.MiningCodingDojo.Domain;
 using Javito.MiningCodingDojo.ServiceLibrary;
 using Swashbuckle.Swagger.Annotations;
 
@@ -45,6 +46,33 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         public void SaveGold(Guid minerId, int goldQuantity)
         {
             mineAppService.SaveGold(minerId, goldQuantity);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+     
+        [Route("GetResults")]
+        [SwaggerResponse(HttpStatusCode.OK)]
+        [HttpGet]
+        public IEnumerable<Miner> GetResults()
+        {
+            return mineAppService.GetResults();
+        }
+
+        /// <summary>
+        /// Save gold in your pocket
+        /// </summary>
+        /// <param name="minerId">The id of the miner</param>
+        /// <param name="goldQuantity">The amount of gold</param>
+        [Route("GetGoldLeft")]
+        [SwaggerResponse(HttpStatusCode.OK)]
+        [HttpGet]
+        public string GetGoldLeft()
+        {
+            int goldLeft = mineAppService.GetGoldLeft();
+            return string.Format("Only {0} gold left", goldLeft);
         }
     }
 }
