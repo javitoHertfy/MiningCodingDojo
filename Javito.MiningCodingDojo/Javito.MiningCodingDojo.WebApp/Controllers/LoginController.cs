@@ -27,10 +27,17 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         [Route("CreateMiner/{name}")]
         [SwaggerResponse(HttpStatusCode.Created)]
         [HttpPost]
-        public void CreateMiner(string name)
+        public IHttpActionResult CreateMiner(string name)
         {
+            try
+            {
             this.minerManagementAppService.InsertMiner(name);
-
+            return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         /// <summary>
@@ -40,9 +47,18 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         [Route("LoginMine/{name}")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [HttpPut]
-        public void LoginMine(string name)
+        public IHttpActionResult LoginMine(string name)
         {
-            this.minerManagementAppService.LoginMine(name);
+            try
+            {
+                this.minerManagementAppService.LoginMine(name);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+       
         }
 
         /// <summary>

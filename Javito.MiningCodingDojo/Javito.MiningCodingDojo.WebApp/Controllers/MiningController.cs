@@ -26,12 +26,12 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         /// </summary>
         /// <param name="minerId"></param>
         /// <returns></returns>
-        [Route("CollectGold/{minerId}")]        
+        [Route("CollectGold/{minerId}")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [HttpPut]
         public int CollectGold(Guid minerId)
         {
-            
+
             return mineAppService.CollectGold(minerId);
         }
 
@@ -40,19 +40,27 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         /// </summary>
         /// <param name="minerId">The id of the miner</param>
         /// <param name="goldQuantity">The amount of gold</param>
-        [Route("SaveGold/{minerId}/{goldQuantity}")]        
+        [Route("SaveGold/{minerId}/{goldQuantity}")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [HttpPut]
-        public void SaveGold(Guid minerId, int goldQuantity)
+        public IHttpActionResult SaveGold(Guid minerId, int goldQuantity)
         {
-            mineAppService.SaveGold(minerId, goldQuantity);
+            try
+            {
+                mineAppService.SaveGold(minerId, goldQuantity);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
 
         /// <summary>
         /// 
         /// </summary>
-     
+
         [Route("GetResults")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [HttpGet]
