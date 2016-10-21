@@ -36,7 +36,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
             return miner.GoldObtained;
 
         }
-
+        
         public void SaveGold(Guid minerId, int goldQuantity)
         {
 
@@ -45,7 +45,7 @@ namespace Javito.MiningCodingDojo.ServiceLibrary
 
             if (miner != null)
             {
-                Miner minerCollected = mineSingletonRepository.GoldMine.Miners.FirstOrDefault(x => x.Id == minerId);
+                Miner minerCollected = mineSingletonRepository.GoldMine.Miners.FirstOrDefault(x => x.Name == miner.Name);
                 if(minerCollected == null)
                 {
                     minerCollected = new Miner(miner.Name);

@@ -31,8 +31,8 @@ namespace Javito.MiningCodingDojo.WebApp.Controllers
         {
             try
             {
-            this.minerManagementAppService.InsertMiner(name);
-            return Ok();
+                this.minerManagementAppService.InsertMiner(name);
+                return Ok();
             }
             catch (Exception ex)
             {
