@@ -32,7 +32,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.Uni
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{C1073FB7-89E2-4B98-948A-47CF2611C439}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.ResilientClient", "Javito.MiningCodingDojo.ResilientClient\Javito.MiningCodingDojo.ResilientClient.csproj", "{7544EF30-C6E7-4727-ADEC-23080ED31970}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.ResilientClient.Javi", "Javito.MiningCodingDojo.ResilientClient\Javito.MiningCodingDojo.ResilientClient.Javi.csproj", "{7544EF30-C6E7-4727-ADEC-23080ED31970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javito.MiningCodingDojo.ResilientClient.Alain", "Javito.MiningCodingDojo.ResilientClient.Alain\Javito.MiningCodingDojo.ResilientClient.Alain.csproj", "{9BF76852-B907-4666-AF1B-882BDE2F70FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,6 +66,10 @@ Global
 		{7544EF30-C6E7-4727-ADEC-23080ED31970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7544EF30-C6E7-4727-ADEC-23080ED31970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7544EF30-C6E7-4727-ADEC-23080ED31970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BF76852-B907-4666-AF1B-882BDE2F70FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF76852-B907-4666-AF1B-882BDE2F70FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF76852-B907-4666-AF1B-882BDE2F70FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF76852-B907-4666-AF1B-882BDE2F70FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,5 +81,6 @@ Global
 		{68ADF126-6B9D-419A-A381-955062BCEB61} = {CEF51E66-B55F-4EB9-8858-5C78ABD548CF}
 		{C6599151-961C-4576-A756-58D1D925118A} = {DC42E3A1-2E9E-435D-A85F-DB7810706E74}
 		{7544EF30-C6E7-4727-ADEC-23080ED31970} = {C1073FB7-89E2-4B98-948A-47CF2611C439}
+		{9BF76852-B907-4666-AF1B-882BDE2F70FD} = {C1073FB7-89E2-4B98-948A-47CF2611C439}
 	EndGlobalSection
 EndGlobal
