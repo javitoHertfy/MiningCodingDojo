@@ -7,13 +7,15 @@ The exercise consisted in mine as fast as possible in a gold mine. You need to m
 
 To get your gold you need:
 
-*Create your miner
-*Log in into the mine
-*Get your identification number
-*Collect Gold using your identification number
-*Save your gold in your pocket ;)
+* Create your miner
+* Log in into the mine
+* Get your identification number
+* Collect Gold using your identification number
+* Save your gold in your pocket ;)
 
 To access to all the endpoints just run [host]/swagger
+
+The kata can be done in 45'
 
 ## Getting Started
 
