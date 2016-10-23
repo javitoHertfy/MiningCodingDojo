@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Javito.MiningCodingDojo.Domain;
-using Javito.MiningCodingDojo.ServiceLibrary;
+using Javito.MiningCodingDojo.ServiceLibrary.Implementation;
 using Swashbuckle.Swagger.Annotations;
 
 namespace Javito.MiningCodingDojo.WebApp.Controllers

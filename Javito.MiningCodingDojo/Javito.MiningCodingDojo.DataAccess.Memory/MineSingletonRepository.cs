@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Javito.MiningCodingDojo.Domain;
+using Javito.MiningCodingDojo.Domain.Contracts;
 
 namespace Javito.MiningCodingDojo.DataAccess.Memory
 {
-    public sealed class MineSingletonRepository
+    public sealed class MineSingletonRepository: IMineManagement
     {
         private static volatile MineSingletonRepository instance;
         private static object syncRoot = new Object();

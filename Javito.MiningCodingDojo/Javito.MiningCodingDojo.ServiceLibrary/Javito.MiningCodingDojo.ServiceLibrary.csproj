@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IMineAppService.cs" />
+    <Compile Include="Contracts\IMinerManagementAppService.cs" />
     <Compile Include="ExceptionTypesEnum.cs" />
-    <Compile Include="FailureService.cs" />
-    <Compile Include="MinerManagementAppService.cs" />
-    <Compile Include="MineAppService.cs" />
+    <Compile Include="Implementation\FailureService.cs" />
+    <Compile Include="Implementation\MinerManagementAppService.cs" />
+    <Compile Include="Implementation\MineAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

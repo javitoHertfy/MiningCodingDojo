@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IMineManagement.cs" />
+    <Compile Include="Contracts\IMinerManagement.cs" />
     <Compile Include="GoldMine.cs" />
     <Compile Include="Miner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

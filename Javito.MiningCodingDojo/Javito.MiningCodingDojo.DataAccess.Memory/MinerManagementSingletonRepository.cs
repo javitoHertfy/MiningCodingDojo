@@ -8,8 +8,9 @@ namespace Javito.MiningCodingDojo.DataAccess.Memory
 {
     using System;
     using Javito.MiningCodingDojo.Domain;
+    using Javito.MiningCodingDojo.Domain.Contracts;
 
-    public sealed class MinerManagementSingletonRepository
+    public sealed class MinerManagementSingletonRepository: IMinerManagement
     {
         private static volatile MinerManagementSingletonRepository instance;
         private static object syncRoot = new Object();

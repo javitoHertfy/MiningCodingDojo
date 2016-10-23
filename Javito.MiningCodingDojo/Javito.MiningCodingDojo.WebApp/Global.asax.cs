@@ -5,7 +5,7 @@ using System.Timers;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
-using Javito.MiningCodingDojo.ServiceLibrary;
+using Javito.MiningCodingDojo.ServiceLibrary.Implementation;
 
 namespace Javito.MiningCodingDojo.WebApp
 {

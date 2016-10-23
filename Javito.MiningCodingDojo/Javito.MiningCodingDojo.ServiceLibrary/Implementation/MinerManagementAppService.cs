@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Javito.MiningCodingDojo.DataAccess.Memory;
 using Javito.MiningCodingDojo.Domain;
 
-namespace Javito.MiningCodingDojo.ServiceLibrary
+namespace Javito.MiningCodingDojo.ServiceLibrary.Implementation
 {
     public class MinerManagementAppService
     {
